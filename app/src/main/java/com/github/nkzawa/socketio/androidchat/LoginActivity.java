@@ -11,6 +11,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 import org.json.JSONException;
@@ -92,6 +94,7 @@ public class LoginActivity extends Activity {
 
         // perform the user login attempt.
         mSocket.emit("add user", username);
+        IO.Options a ;
     }
 
     private Emitter.Listener onLogin = new Emitter.Listener() {
